@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project1</title>
+    <link rel="stylesheet" href="doc.css">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact Us</li>
+        </ul>
+        <div class="bg none"></div>
+    </nav>
+
+    <script>
+        const c = document.querySelector('.bg')
+        const d = document.getElementsByTagName('ul')
+        document.addEventListener('mousemove', (e) => {
+
+            c.style.left = e.pageX + 'px';
+            c.style.top = e.pageY + 'px';
+
+        })
+
+        d[0].addEventListener('mouseover', ()=>{
+            c.classList.remove('none')
+        })
+        d[0].addEventListener('mouseout', ()=>{
+            c.classList.add('none')
+        })
+    </script>
+
+
+</body>
+
+</html>
